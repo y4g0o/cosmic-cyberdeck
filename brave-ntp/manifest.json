@@ -1,0 +1,7 @@
+{
+  "manifest_version": 3,
+  "name": "cosmic-cyberdeck new tab",
+  "version": "1.0",
+  "description": "HUD-style new tab for cosmic-cyberdeck (local, no network).",
+  "chrome_url_overrides": { "newtab": "newtab.html" }
+}

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "cosmic-cyberdeck",
+  "version": "1.0",
+  "description": "cosmic-cyberdeck theme (generated from paletas/)",
+  "theme": {
+    "images": { "theme_ntp_background": "images/ntp.png" },
+    "colors": {
+      "frame": [6, 6, 9],
+      "frame_inactive": [4, 4, 6],
+      "toolbar": [15, 13, 24],
+      "tab_text": [184, 255, 46],
+      "tab_background_text": [138, 140, 168],
+      "tab_background_text_inactive": [94, 92, 122],
+      "bookmark_text": [123, 77, 255],
+      "toolbar_text": [184, 255, 46],
+      "toolbar_button_icon": [184, 255, 46],
+      "omnibox_background": [6, 6, 9],
+      "omnibox_text": [232, 234, 242],
+      "ntp_background": [6, 6, 9],
+      "ntp_text": [184, 255, 46],
+      "ntp_link": [123, 77, 255],
+      "ntp_header": [255, 45, 85]
+    },
+    "properties": { "ntp_background_alignment": "center", "ntp_background_repeat": "no-repeat" }
+  }
+}

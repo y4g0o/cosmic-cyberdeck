@@ -1,0 +1,18 @@
+# Layout do cyberdeck (exemplo: ultrawide 2560x1080 à esquerda + 1920x1080 à direita). Ajuste nomes e tamanhos dos monitores (`cosmic-randr list`). Divisões ao meio, como o tiling do COSMIC.
+# H(a,b) = lado a lado · V(a,b) = empilhado. Regra do COSMIC: H só em região mais larga que alta, V só em mais alta. "zonas" = slots ocupados por janelas-fantasma (arte).
+
+[geral]
+painel = 32          # altura do painel superior (tamanho XS)
+gap_externo = 0      # vão nas bordas (tema: gaps.0)
+gap_interno = 28     # vão entre janelas (tema: gaps.1)
+
+[saidas.HDMI-A-1]    # ultrawide, à esquerda
+largura = 2560
+altura = 1080
+arvore = "H(V(spotify,cava),terminal_livre)"   # V contra o lado mais longo: o cyberdeck gira com Super+O
+zonas = []
+
+[saidas.DP-3]        # principal, à direita
+largura = 1920
+altura = 1080
+arvore = "H(brave,V(hud,arquivos))"   # Brave: arraste a divisória e rode `cyberdeck --gravar`

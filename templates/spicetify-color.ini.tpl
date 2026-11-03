@@ -1,0 +1,19 @@
+[Base]
+text               = {{hex:accent}}
+subtext            = {{hex:foco}}
+main               = {{hex:fundo}}
+main-elevated      = {{hex:sup_a}}
+highlight          = {{hex:roxo_profundo}}
+highlight-elevated = {{hex:borda}}
+sidebar            = {{hex:fundo_2}}
+player             = {{hex:fundo_2}}
+card               = {{hex:sup_a}}
+shadow             = {{hex:preto}}
+selected-row       = {{hex:alerta}}
+button             = {{hex:accent}}
+button-active      = {{hex:foco}}
+button-disabled    = {{hex:ansi_8}}
+tab-active         = {{hex:roxo_profundo}}
+notification       = {{hex:foco}}
+notification-error = {{hex:alerta}}
+misc               = {{hex:ansi_5}}

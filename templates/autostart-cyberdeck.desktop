@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=cosmic-cyberdeck
+Comment=Theme maintenance and layout assembly on login (cosmic-cyberdeck)
+Exec=/bin/bash "{{RAIZ}}/ao_entrar.sh"
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

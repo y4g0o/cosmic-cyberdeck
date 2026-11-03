@@ -1,0 +1,50 @@
+/* cyberdeck — nova aba (gerado de paletas/) */
+@font-face { font-family: "Orbitron"; src: url("fontes/Orbitron.ttf"); font-weight: 400 900; }
+@font-face { font-family: "ShareTech"; src: url("fontes/ShareTechMono-Regular.ttf"); }
+@font-face { font-family: "Dot"; src: url("fontes/DotGothic16-Regular.ttf"); }
+:root { --fundo: {{fundo}}; --accent: {{accent}}; --foco: {{foco}}; --texto: {{texto}}; --muted: {{muted}};
+        --sup: {{superficie_1}}; --borda: {{borda}}; --alerta: {{alerta}};
+        --cut: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px)); }
+* { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; background: var(--fundo); color: var(--texto); font-family: "ShareTech", "Dot", monospace; overflow: hidden; }
+.fundo { position: fixed; inset: 0; background: url("fundo.jpg") center / cover no-repeat; opacity: .28; }
+.fundo::after { content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, transparent 20%, var(--fundo) 85%); }
+main { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; }
+header { text-align: center; }
+.tag { font-family: "Dot", monospace; color: var(--foco); letter-spacing: 3px; font-size: 14px; }
+h1 { font: 900 clamp(72px, 11vw, 140px)/1 "Orbitron", sans-serif; color: var(--accent); letter-spacing: 6px;
+     text-shadow: 3px 0 var(--alerta), -3px 0 var(--foco); }
+.sub { color: var(--muted); letter-spacing: 4px; margin-top: 10px; }
+.busca { width: min(760px, 80vw); display: flex; align-items: center; gap: 12px; padding: 14px 20px;
+         background: var(--sup); border: 1px solid var(--borda); border-left: 3px solid var(--accent); clip-path: var(--cut); }
+.busca input { flex: 1; background: none; border: 0; outline: 0; color: var(--texto); font: 20px "ShareTech", monospace; }
+.prompt { color: var(--accent); font-size: 20px; }
+.atalhos { display: grid; grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); gap: 12px; width: min(960px, 90vw); }
+.atalhos a { display: flex; justify-content: space-between; align-items: center; padding: 14px 14px; text-decoration: none;
+             background: color-mix(in srgb, var(--sup) 92%, transparent); border: 1px solid var(--borda);
+             border-left: 2px solid var(--accent); clip-path: var(--cut); color: var(--texto); font-size: 13px; letter-spacing: 1px; }
+.atalhos a i { font-style: normal; color: var(--muted); font-size: 11px; }
+.atalhos a:hover, .atalhos a:focus { border-left-color: var(--foco); color: var(--accent); outline: none; }
+footer { position: fixed; bottom: 18px; left: 26px; right: 26px; display: flex; justify-content: space-between;
+         font: 700 14px "Orbitron", sans-serif; color: var(--accent); letter-spacing: 3px; }
+footer span:last-child { color: var(--foco); }
+.editar { position: fixed; top: 18px; right: 22px; background: none; border: 1px solid var(--borda); color: var(--muted);
+          font: 12px "ShareTech", monospace; letter-spacing: 2px; padding: 6px 12px; cursor: pointer; clip-path: var(--cut); }
+.editar:hover { color: var(--accent); border-color: var(--accent); }
+.modo-edicao .atalhos a { border-left-color: var(--foco); position: relative; }
+.ctl { position: absolute; top: 2px; right: 4px; display: flex; gap: 2px; }
+.ctl button { background: var(--fundo); color: var(--muted); border: 1px solid var(--borda); font-size: 10px; padding: 0 4px; cursor: pointer; }
+.ctl button:hover { color: var(--accent); }
+.ctl button[data-a="del"]:hover { color: var(--alerta); }
+.modo-edicao .atalhos a i { visibility: hidden; }
+.atalhos a.mais { justify-content: center; color: var(--accent); border-style: dashed; }
+.editor { display: flex; gap: 10px; width: min(760px, 80vw); padding: 12px 16px; background: var(--sup);
+          border: 1px solid var(--foco); clip-path: var(--cut); }
+.editor[hidden] { display: none; }
+.editor input { flex: 1; background: var(--fundo); border: 1px solid var(--borda); color: var(--texto); padding: 8px 10px;
+                font: 14px "ShareTech", monospace; outline: none; }
+.editor input:focus { border-color: var(--accent); }
+.editor button { background: var(--accent); color: var(--fundo); border: 0; padding: 8px 14px; font: 700 12px "Orbitron", sans-serif;
+                 letter-spacing: 1px; cursor: pointer; }
+.editor button[type="button"] { background: none; color: var(--muted); border: 1px solid var(--borda); }

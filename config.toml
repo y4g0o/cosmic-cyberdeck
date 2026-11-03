@@ -1,0 +1,12 @@
+# cosmic-cyberdeck: user settings (read by marca.py)
+
+# Signature drawn on the posters, boot screen, terminal HUD, Brave new tab and fastfetch logo.
+# Uppercase, up to 24 characters. The CYBERDECK_SIGNATURE environment variable overrides it.
+assinatura = "CYBERDECK"
+
+[hud]
+# Extra git repositories for the HUD "GIT" line (this repo is always included). Example: ["~/code/app"]
+repos = []
+# systemd unit (system or --user) whose last run shows as "bkp" in the HUD, e.g. "restic-backup.service".
+# Empty = hidden.
+backup_unit = ""
