@@ -1,4 +1,5 @@
 import re
+import shutil
 from pathlib import Path
 
 import pytest
@@ -72,6 +73,7 @@ def test_cava_dorme_em_silencio(tmp_path):
     assert "sleep_timer = 3" in next(tmp_path.rglob("cava/config")).read_text()
 
 
+@pytest.mark.skipif(shutil.which("fish") is None, reason="precisa do fish instalado")
 def test_fish_aberto_recarrega_cores_ao_trocar_paleta(tmp_path):
     aplicar.main(["--seco", "--paleta", "acid", "--destino-seco", str(tmp_path)])
     cores = next(tmp_path.rglob("90-cyberdeck-cores.fish"))
