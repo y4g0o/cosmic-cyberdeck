@@ -4,6 +4,7 @@
 
 **Um tema modular de "dossiê de operador" para Pop!_OS 24.04 + COSMIC: um arquivo de paleta comanda o tema do COSMIC, terminais, ícones, cursor, sons, tela de boot, Brave e um layout em tiling que se monta sozinho, com o papel de parede desenhado em volta das janelas.**
 
+[![CI](https://github.com/y4g0o/cosmic-cyberdeck/actions/workflows/ci.yml/badge.svg)](https://github.com/y4g0o/cosmic-cyberdeck/actions/workflows/ci.yml)
 [![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-B8FF2E.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.11%2B-7B4DFF.svg)
 ![Plataforma](https://img.shields.io/badge/Pop!__OS%2024.04-COSMIC%201.11%20(Wayland)-3C7BFF.svg)
